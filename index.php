@@ -1,20 +1,18 @@
 <?php
 
-include('vendor/autoload.php');
+require_once __DIR__ . '/vendor/autoload.php';
 
-    use Longman\TelegramBot\Telegram;
-    use Longman\TelegramBot\Request;
+/** @var array $config */
+$config = require __DIR__ . '/config.php';
 
-    $chatId = '-836065006';
-    $botName = 'PopukoPipimiBot';
-    $token = '5861519122:AAFsOR8DUJeztc4TGbPp8CIgtoZywp_0E8Y';
+use Longman\TelegramBot\Telegram;
+use Longman\TelegramBot\Request;
 
-    $telegram = new Telegram($token, $botName);
+$telegram = new Telegram($config['api_key'], $config['bot_username']);
 
-    // $telegram->sendMessage();
-    Request::sendMessage([
-        'chat_id' => $chatId,
-        'text' => 'Hello Jie Lun'
-    ]);
+Request::sendMessage([
+    'chat_id' => $chatId,
+    'text' => 'Hello Jie Lun'
+]);
 
 ?>
