@@ -1,0 +1,11 @@
+{
+    "name": "popupkupipimibot/popupkupipimibot",
+    "type": "project",
+    "description": "PHP Telegram Bot",
+    "keywords": ["telegram", "bot", "example"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.3",
+        "longman/telegram-bot": "*"
+    }
+}
